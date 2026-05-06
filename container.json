@@ -1,0 +1,46 @@
+{
+  "location": "ukwest",
+  "properties": {
+    "osType": "Linux",
+    "imageRegistryCredentials": [
+      {
+        "server": "pa427100116.azurecr.io",
+        "username": "pa427100116",
+        "password": "Cxdxi3e1mNEtAs6XogtZeLW4WGm7LMOLpfRZafQRvqphYZ415at5JQQJ99CEAClhwhEEqg7NAAACAZCRTLKU"
+      }
+    ],
+    "containers": [
+      {
+        "name": "ci-report-test",
+        "properties": {
+          "image": "pa427100116.azurecr.io/report-job:v1",
+          "resources": {
+            "requests": {
+              "cpu": 1.0,
+              "memoryInGB": 1.5
+            }
+          },
+          "environmentVariables": [
+            {
+              "name": "ORDER_ID",
+              "value": "TEST-001"
+            },
+            {
+              "name": "ORDER_JSON",
+              "value": "{\"order_id\":\"TEST-001\",\"items\":[{\"sku\":\"ABC\",\"qty\":2}]}"
+            },
+            {
+              "name": "STORAGE_ACCOUNT_URL",
+              "value": "https://rgsp2627100116a0ab.blob.core.windows.net"
+            },
+            {
+              "name": "AZURE_CLIENT_ID",
+              "value": "693002b8-8be3-46ae-baad-1682472f065c"
+            }
+          ]
+        }
+      }
+    ],
+    "restartPolicy": "Never"
+  }
+}
