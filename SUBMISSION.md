@@ -196,6 +196,12 @@
 
 ---
 
+![Architecture Diagram](<architecture diagram.png>)
+
+**Architecture Diagram**
+
+---
+
 ## 1. Service Selection
 
 **App Service:** App Service is the ideal platform for hosting the frontend web UI because it is a fully managed PaaS offering that abstracts away infrastructure maintenance. It provides built-in auto-scaling for handling fluctuating user traffic to the web interface. From a cost perspective, it operates on predictable, tier-based monthly pricing, making it easy to budget for a persistent web frontend.
